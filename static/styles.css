@@ -1,0 +1,71 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    display: flex; /* Use flexbox layout */
+}
+
+.editor-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Space items evenly */
+    width: 100%;
+}
+
+.editor {
+    width: 48%; /* Set width for code editor */
+}
+
+.output-container {
+    width: 48%; /* Set width for output display */
+}
+
+textarea {
+    background-color: black;
+    color: lime;
+    border: 2px solid lime;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    animation: typing 1s steps(40, end);
+}
+
+button {
+    background-color: lime;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+}
+
+.output {
+    background-color: black;
+    color: lime;
+    border: 2px solid lime;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

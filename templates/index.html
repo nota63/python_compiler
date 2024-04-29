@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Compiler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/photos/programming-code-abstract-technology-background-of-software-developer-picture-id1201405775?k=6&m=1201405775&s=170667a&w=0&h=wXo6SNU_I9-qNyZD7uq1mHFwr-h3WAEyr3nN3Adsl1I='); /* Replace 'path_to_your_image.jpg' with the path to your image file */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Add any additional styling for the body here */
+        }
+        .container {
+            /* Add any styling for the container here */
+        }
+        /* Add any additional CSS styling for other elements here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python Compiler</h1>
+        <form action="/" method="post">
+            <textarea name="code" id="code" rows="10" placeholder="Enter your Python code here">{{ code }}</textarea>
+            <input type="hidden" name="prev_code" id="prev_code" value="{{ code }}">
+            <button type="submit" id="run-btn">Run</button>
+        </form>
+        {% if output %}
+        <div class="output">
+            <pre>{{ output }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
